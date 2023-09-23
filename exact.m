@@ -211,7 +211,7 @@ function [ptrans,nn,scale] = bat_transitions(Upre,Unext,pE_transition)
 end
 
 %% Compute the successful decoding probability
-function w0 = compute_w(E0,Ue,noise,slotLength,ptx,alpha,err,capture,SIC,err_precomp)
+function w0 = compute_w(E0,Ue,noiseVar,slotLength,ptx,alpha,err,capture,SIC,err_precomp)
     Psi = length(Ue)-1;
     w0 = 0;
     if E0 > 0
@@ -227,19 +227,19 @@ function w0 = compute_w(E0,Ue,noise,slotLength,ptx,alpha,err,capture,SIC,err_pre
             if SIC
                 w0_tmp = 0;
                 for idxMC = 1:nMC
-                    E = [E0 flip(repelem(1:Psi,Ue_trans(idxMC,:)))];
-                    w_tmp = compute_w_SIC(E,slotLength,noise,err,1,err_precomp);
+                    powers = [E0 flip(repelem(1:Psi,Ue_trans(idxMC,:)))];
+                    w_tmp = compute_w_capture(powers,slotLength,noiseVar,1,err,err_precomp);
                         w0_tmp = w0_tmp + w_tmp(1); 
                 end
                 w0 = w0_tmp/nMC; 
             else
-                P = E0/slotLength/noise;
-                Pint = Ue_trans*[1:Psi]'/slotLength/noise;
-                Pint2 = Ue_trans*([1:Psi].^2)'/slotLength/noise;
+                P = E0/slotLength/noiseVar;
+                Pint = Ue_trans*[1:Psi]'/slotLength/noiseVar;
+                Pint2 = Ue_trans*([1:Psi].^2)'/slotLength/noiseVar;
                 w0 = mean(1-err(P,Pint,Pint2),1);
             end
         else
-            w0 = (1-err(E0/noise/slotLength))*...
+            w0 = (1-err(E0/noiseVar/slotLength))*...
                     prod((1-alpha*ptx(:)).^Ue(:));
         end
     end
