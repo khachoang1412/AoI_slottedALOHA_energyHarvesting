@@ -2,11 +2,11 @@
 
 This repository contains the Matlab numerical routines of the paper:
 
-[1] K.-H. Ngo, G. Durisi, A. Munari, and F. Lazaro, and A. Graell i Amat, "Timely status updates in slotted ALOHA networks with energy harvesting," submitted to IEEE Transactions on Communications, Apr. 2024.
+[1] K.-H. Ngo, G. Durisi, A. Munari, and F. Lazaro, and A. Graell i Amat, "Timely status updates in slotted ALOHA networks with energy harvesting," submitted to IEEE Transactions on Communications, Apr. 2024. URL: [https://arxiv.org/pdf/2404.18990](https://arxiv.org/pdf/2404.18990)
 
 and of a simplified setting reported in its short version presented at Globecom 2023:
 
-[2] K.-H. Ngo, G. Durisi, A. Graell i Amat, A. Munari, and F. Lazaro, “Age of information in slotted ALOHA with energy harvesting,” in IEEE Global Communications Conference (Globecom), Kuala Lumpur, Malaysia, Dec. 2023. URL: [https://research.chalmers.se/publication/537484/file/537484_Fulltext.pdf](https://research.chalmers.se/publication/537484/file/537484_Fulltext.pdf).
+[2] K.-H. Ngo, G. Durisi, A. Graell i Amat, A. Munari, and F. Lazaro, “Age of information in slotted ALOHA with energy harvesting,” in IEEE Global Communications Conference (Globecom), Kuala Lumpur, Malaysia, Dec. 2023. URL: [https://arxiv.org/pdf/2310.00348](https://arxiv.org/pdf/2310.00348).
 
 Please cite the aforementioned papers if you use this code.
 
