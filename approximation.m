@@ -11,7 +11,9 @@ function [output,w,pE_steady] = approximation(U,E,alpha,eta,ptx,pretx, ...
 % 
 % ﻿Khac-Hoang Ngo, G. Durisi, A. Munari, and F. Lazaro, and A. Graell i Amat,
 % "Timely status updates in slotted ALOHA networks with energy harvesting," 
-% submitted to IEEE Transactions on Communications, Apr. 2024.
+% submitted to IEEE Transactions on Communications, Apr. 2024. 
+%
+% Preprint: https://arxiv.org/pdf/2404.18990
 %
 % This code implements a more general version of the protocol considered in
 % this reference. Here, we assume that a device can also retransmit
