@@ -78,7 +78,7 @@ nvar = (E-minE_to_opt+1)*(E-minE_to_opt+2)/2;   % number of optimization variabl
 
 n_ini = 200;        % number of trials 
 ini_set = [];       % initialization set
-for idxini = 1:n_in
+for idxini = 1:n_ini
     ini_p = rand;
     for ii = 2:E-minE_to_opt+1
             ini_p = [ini_p; [randfixedsum(ii,1,rand,0,1)]];
