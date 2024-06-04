@@ -26,6 +26,7 @@ The folder `helpers` contains the following supplementary functions:
 2. `interger_partitions.m`: partition a given interger into multiple integers.
 3. `uniqueperms.m`: generate all unique permutations of elements in a vector.
 4. `randi_distr.m`: generate a matrix with random entries distributed according to a specified discrete distribution.
-5. `fminsearchcon.m`: optimization using the Nelder-Mead method; extension of FMINSEARCHBND in Matlab with general inequality constraints.
+5. `randfixedsum.m`: generate random values lying in the interval and summing to a given value.
+6. `fminsearchcon.m`: optimization using the Nelder-Mead method; extension of FMINSEARCHBND in Matlab with general inequality constraints.
 
 The functions `interger_partitions`, `uniqueperms`, and `fminsearchcon` were written by other people. The references are provided in the files.
